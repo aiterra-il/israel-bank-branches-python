@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "israel-bank-branches"
+dynamic = ["version"]
+description = "Israeli bank branches and bank codes from the Bank of Israel open data on data.gov.il: find a branch by bank and branch number, search by city or street, nearest branches, SWIFT codes"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Aiterra", email = "info@aiterra.co.il" }]
+keywords = ["israel", "bank", "branches", "bank-code", "swift", "סניפי בנקים", "מספר סניף", "בנק ישראל", "data.gov.il", "hebrew"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Natural Language :: Hebrew",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Office/Business :: Financial",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://www.aiterra.co.il/tools/bank-branch-lookup"
+Repository = "https://github.com/aiterra-il/israel-bank-branches-python"
+Issues = "https://github.com/aiterra-il/israel-bank-branches-python/issues"
+"npm package" = "https://www.npmjs.com/package/israel-bank-branches"
+Dataset = "https://huggingface.co/datasets/aiterra/israel-bank-branches"
+Aiterra = "https://www.aiterra.co.il"
+
+[tool.setuptools]
+packages = ["israel_bank_branches"]
+
+[tool.setuptools.dynamic]
+version = { attr = "israel_bank_branches.__version__" }
+
+[tool.setuptools.package-data]
+israel_bank_branches = ["py.typed"]
